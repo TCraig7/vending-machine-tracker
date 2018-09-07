@@ -31,7 +31,7 @@ feature 'When a user visits a vending machine show page' do
     snack2 = dons.snacks.create!(name: 'Snickers', price: 2.00)
 
     visit machine_path(dons)
-save_and_open_page
+
     expect(page).to have_content("Average Price: $1.50")
   end
 end
