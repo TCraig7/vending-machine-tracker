@@ -18,10 +18,10 @@ feature 'When a user visits a vending machine show page' do
 
     visit machine_path(dons)
 
-    expect(page).to have_content("Snack: #{snack1.name}")
-    expect(page).to have_content("Price: $#{snack1.price}")
-    expect(page).to have_content("Snack: #{snack2.name}")
-    expect(page).to have_content("Price: $#{snack2.price}")
+    expect(page).to have_content(snack1.name)
+    expect(page).to have_content(snack1.price)
+    expect(page).to have_content(snack2.name)
+    expect(page).to have_content(snack2.price)
   end
 
   scenario 'user sees average price for snacks in machine' do
