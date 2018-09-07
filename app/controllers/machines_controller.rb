@@ -6,4 +6,10 @@ class MachinesController < ApplicationController
   def show
     @machine = Machine.find(params[:id])
   end
+
+  helpers do
+    def number_to_currency(number)
+      ('$%.2f' % number).to_s
+    end
+  end
 end
